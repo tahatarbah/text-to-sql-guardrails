@@ -1,0 +1,19 @@
+ollama:
+  host: http://localhost:11434
+  sql_model: sqlcoder:7b
+  judge_model: llama3.2
+  temperature: 0.1
+  timeout_sec: 120
+
+safety:
+  max_rows: 100
+  query_timeout_sec: 30
+  # Empty list = all introspected tables allowed
+  table_allowlist: []
+  judge_mode: block  # block | warn | off
+  judge_threshold: 0.7
+  schema_top_n: 12
+
+api:
+  host: 0.0.0.0
+  port: 8000
